@@ -34,11 +34,12 @@ export default function Home() {
     if (!isLoading && scrollRef.current) {
       const lenis = new Lenis({
         // Optional Lenis options
-        smooth: true,
-        lerp: 0.1,
-        mouseMultiplier: 1,
-        smoothTouch: false,
+        lerp: 0.08,         // Controls the smoothness of scrolling
+  touchMultiplier: 1, // Sensitivity of touch scrolling (used for touch events)
+
       });
+
+      
 
       // Ensure ScrollTrigger works with Lenis scroll
       lenis.on("scroll", ScrollTrigger.update); // Make ScrollTrigger update on Lenis scroll

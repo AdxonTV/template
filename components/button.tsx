@@ -14,7 +14,7 @@ const Button: React.FC<text> = ({ text, image }) => {
       >
         <span>FEEL IT</span>
      <Image
-     src={image}
+     src={`${image}`}
      width={8}
      height={8}
      alt=""

@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import React from "react";
 import WorksTitle from "./works-title-left";
 import gsap from "gsap";
@@ -20,7 +20,7 @@ const Works = () => {
     ];
 
     // Create animations for each section
-    sections.forEach((section, index) => {
+    sections.forEach((section) => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: section.className,
@@ -33,7 +33,7 @@ const Works = () => {
 
       // Animate section movement
       tl.to(section.className, { ease: "none", x: section.x });
-      tl.to(".theline2", { height: `${(index + 1) * 30}vh`, ease: "none" });
+      // tl.to(".theline2", { height: `${(index + 1) * 30}vh`, ease: "none" });
     });
     
 
