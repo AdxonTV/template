@@ -2,16 +2,12 @@
 import Section from "@/components/section";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import Image from "next/image";
-import Button from "@/components/button";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import Lenis from "lenis";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
-import BackgroundImage from "@/components/backgroundImage";
-import MainText from "@/components/MainText";
+
 import Works from "@/components/works";
-import Undertext from "@/components/undertext";
+import MainSection from "@/components/main-section";
+
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,27 +72,15 @@ export default function Home() {
   }, []);
 
   return (
-    <div ref={scrollRef} style={{ height: "900vh", overflow: "hidden" }}>
-      <div
-        className="fixed
-z-[1000]"
-      >
-        <Navbar />
-      </div>
+    <div  ref={scrollRef} style={{ height: "1000vh", overflow: "hidden" }}>
 
-      <div className="w-20  h-20 check  absolute bottom-0"></div>
+      <div className="flex-col">
+      <MainSection></MainSection>
 
-      <div className="bottom-0 -z-10 fixed">
-        <MainText text="EXPLORE." text2="(STUDIO)" />
-
-        <Footer />
-      </div>
-
-      <div className=" justify-center relative flex w-full">
-        <BackgroundImage />
-      </div>
+            <Works></Works>
       <Section></Section>
-      <Works></Works>
+
+      </div>
     </div>
   );
 }
