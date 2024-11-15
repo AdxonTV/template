@@ -90,11 +90,12 @@ export default function Home() {
     <div  ref={scrollRef} style={{ height: "1000vh", overflow: "hidden" }}>
 
       <div className="flex-col">
+
       <MainSection></MainSection>
-     
+      <Section></Section>
       <Works></Works> 
     
-      <Section></Section>
+     
      
       
       
