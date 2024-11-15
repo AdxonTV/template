@@ -35,8 +35,8 @@ const WorksTitle: React.FC<works> = ({ text1, text2, photo }) => {
       </div>
 
       <div className="  font-[nohemi] flex flex-col absolute w-fit   text-end right-0 h-fit z-10  ">
-        <span className=" right-0  text-right  py-4   mb-6 "> {text1}</span>
-        <span className=" right-0    text-[84px]  leading-[110%] " >{text2}</span>
+        <span className=" right-0  text-[0.7vw] text-right  py-4   mb-6 "> ({text1})</span>
+        <span className=" right-0    text-[3.5vw]  leading-[110%] " >{text2}</span>
         <div className="bg-black w-20 h-full right-0 absolute -z-10"></div>
       </div>
 

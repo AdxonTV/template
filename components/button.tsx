@@ -7,12 +7,12 @@ interface text {
 const Button: React.FC<text> = ({ text, image }) => {
   return (
     <div className="  bg-slate-50 text-black rounded-md px-3 flex  items-center">
-        <div className="">
+        <div className="text-[0.7vw]">
       <div
         className="text-[10px] w-full flex justify-between
         "
       >
-        <span>FEEL IT</span>
+        <span className="text-[0.42vw]">FEEL IT</span>
      <Image
      src={`${image}`}
      width={8}
@@ -20,6 +20,8 @@ const Button: React.FC<text> = ({ text, image }) => {
      alt=""
      ></Image>
       </div>
+
+      
       {text}</div>
     </div>
   );

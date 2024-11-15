@@ -70,16 +70,34 @@ export default function Home() {
       // x: vw(37),
       y: 1050, // moves the box horizontally
     });
-  }, []);
 
+    gsap.to(".sectio-page", {
+      scrollTrigger: {
+        trigger: ".sectio-page",
+        start: "top top",
+        end: "+=3000px",
+        pin: true,
+        pinSpacing: false,
+        scrub: true,
+      },
+   
+    });
+  }, []);
+{/* <div className="  h-[100vh]">
+      <div className="text-[8.4vw] tracking-tighter border-solid bg-black leading-[15vw] border-b-2 border-t-2 font-[nohemi] border-white"> WORKING ON PROJECTS®</div> 
+      </div> */}
   return (
     <div  ref={scrollRef} style={{ height: "1000vh", overflow: "hidden" }}>
 
       <div className="flex-col">
       <MainSection></MainSection>
-
-            <Works></Works>
+     
+      <Works></Works> 
+    
       <Section></Section>
+     
+      
+      
 
       </div>
     </div>

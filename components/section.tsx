@@ -88,7 +88,7 @@ const Section = () => {
       </div>
 
       <div className="w-[100vw] absolute h-[0] theline flex  justify-center ">
-        <div className="theline z-[10000] h-full    w-[2px] opacity-0 bg-white"></div>
+        <div className="theline z-[10000] h-full    w-[2px]  bg-white"></div>
       </div>
       <div className="text-container absolute z-50 h-[100vh] flex items-center  justify-center overflow-hidden w-[200vw] ml-[-50%]">
         <span className="text1 font-[ade] text-[255px] pl-[50px]">SHOW</span>
