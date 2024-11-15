@@ -76,7 +76,7 @@ const Works = () => {
     <div className="works-container w-full h-[390vh] bg-black  relative">
 
       <div className="overflow-hidden h-[10vh] theline2 w-full flex justify-center">
-        <div className="h-full w-[2px] bg-red-500 "></div>
+        <div className="h-full w-[2px] bg-white "></div>
 
       </div>
 
