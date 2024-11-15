@@ -92,9 +92,9 @@ export default function Home() {
       <div className="flex-col">
 
       <MainSection></MainSection>
-      <Section></Section>
+      
       <Works></Works> 
-    
+      <Section></Section>
      
      
       
