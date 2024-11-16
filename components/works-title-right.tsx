@@ -14,27 +14,27 @@ const WorksTitleRight :React.FC<works> = ({text1, text2, photo}) => {
 
         
 
-<div className="w-full   flex">
+<div className="w-full h-[50vh]   flex">
 {/* <div className="w-[49vw] "></div> */}
-<div className="w-[51vw] flex items-center   relative">
+<div className="w-[51vw]   flex items-center   relative">
 
 
 
   <div className="  font-[nohemi] flex flex-col absolute w-[14.5vw]  left-0 h-fit  z-10  ">
     <span className=" text-[0.7vw]  text-left  py-4  mb-6">({text1})</span>
-    <span className="   text-[3.5vw]   leading-[110%]">{text2}</span>
-    <div className="bg-black w-20 h-full left-0 absolute -z-10"></div>
+    <span className="   text-[3.5vw]    leading-[110%]">{text2}</span>
+    <div className=" w-20 h-full   left-0 absolute -z-10"></div>
   </div>
   <div className="w-[12vw]"></div>
 
 
-  <div className="w-[40vw]  bg-amber-500  overflow-hidden">
+  <div className="w-[40vw]    overflow-hidden">
         <Image
         className="w-full  "
           src={photo}
-          width={3000}
+          width={1000}
           alt="  "
-          height={3000}
+          height={1000}
         ></Image>
       </div>
 

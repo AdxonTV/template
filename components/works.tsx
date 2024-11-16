@@ -56,6 +56,7 @@ const Works = () => {
           start: "top bottom",
           end: "bottom center",
           scrub: true,
+        
         },
       });
     
@@ -93,9 +94,10 @@ const Works = () => {
       
         </div>
 
-        <div className="work-2 h-fit w-fit">
+        <div className="work-2 h-[45vh] w-fit">
           <div className="section2 mb-[-70px] translate-x-[200%]">
             <WorksTitleRight
+       
               text1="3D PROJECT"
               text2="Antiques"
               photo="/images/image 231.png"
