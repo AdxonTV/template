@@ -34,7 +34,7 @@ export default function Home() {
     if (!isLoading && scrollRef.current) {
       const lenis = new Lenis({
         // Optional Lenis options
-        lerp: 0.08,         // Controls the smoothness of scrolling
+        lerp: 0.05,         // Controls the smoothness of scrolling
   touchMultiplier: 1, // Sensitivity of touch scrolling (used for touch events)
 
       });
@@ -68,8 +68,9 @@ export default function Home() {
       <div className="flex-col">
 
       <MainSection></MainSection>
-         <Section></Section>
       <Works></Works> 
+         <Section></Section>
+     
    
      
      
