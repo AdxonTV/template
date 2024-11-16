@@ -19,7 +19,29 @@ const MainSection = () => {
       // x: vw(37),
       // y: 1050, // moves the box horizontally
     });
+
+
+
+
+
+
+      gsap.to(".box", {
+        scrollTrigger: {
+          trigger: ".check", // When the ".box" enters the viewport
+          start: "bottom bottom", // animation starts when the top of the box reaches the bottom of the viewport
+          end: "top top", // ends when the top of the box reaches the top of the viewport
+          scrub: true, // makes the animation smooth and tied to the scroll position
+        },
+  
+        // x: vw(37),
+        y: 1050, // moves the box horizontally
+      });
+  
+  
+
   }, []);
+
+
 
 
 

@@ -58,31 +58,7 @@ export default function Home() {
       });
     }
   }, [isLoading]);
-  useEffect(() => {
-    gsap.to(".box", {
-      scrollTrigger: {
-        trigger: ".check", // When the ".box" enters the viewport
-        start: "bottom bottom", // animation starts when the top of the box reaches the bottom of the viewport
-        end: "top top", // ends when the top of the box reaches the top of the viewport
-        scrub: true, // makes the animation smooth and tied to the scroll position
-      },
-
-      // x: vw(37),
-      y: 1050, // moves the box horizontally
-    });
-
-    gsap.to(".sectio-page", {
-      scrollTrigger: {
-        trigger: ".sectio-page",
-        start: "top top",
-        end: "+=3000px",
-        pin: true,
-        pinSpacing: false,
-        scrub: true,
-      },
-   
-    });
-  }, []);
+ 
 {/* <div className="  h-[100vh]">
       <div className="text-[8.4vw] tracking-tighter border-solid bg-black leading-[15vw] border-b-2 border-t-2 font-[nohemi] border-white"> WORKING ON PROJECTS®</div> 
       </div> */}
@@ -92,9 +68,9 @@ export default function Home() {
       <div className="flex-col">
 
       <MainSection></MainSection>
-      
+         <Section></Section>
       <Works></Works> 
-      <Section></Section>
+   
      
      
       
