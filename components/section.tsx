@@ -20,69 +20,67 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top top",
-          end: "+=2000px",
+          end: "+=222.22vh", // 2000px in vh
           pin: true,
           pinSpacing: false,
           scrub: true,
         },
       });
-
+      
       gsap.to(".x1", {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "+=2400px",
+          end: "+=266.67vh", // 2400px in vh
           scrub: true,
         },
         scale: 2.8,
       });
-
+      
       gsap.to(".x-container", {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "+=3000px",
+          end: "+=333.33vh", // 3000px in vh
           scrub: true,
         },
         width: width,
         height: height,
       });
-
-      // Pinning and animating the text container
+      
       gsap.to(".text-container", {
         scrollTrigger: {
           trigger: ".text-container",
           start: "top top",
-          end: "+=2000px",
+          end: "+=222.22vh", // 2000px in vh
           pin: true,
           pinSpacing: true,
         },
       });
-
-      // Animate the space between words
+      
       gsap.to(".space-between-words", {
         scrollTrigger: {
           trigger: ".text-container",
           start: "top top",
-          end: "+=1000px",
+          end: "+=111.11vh", // 1000px in vh
           scrub: true,
         },
         ease: "power4.out",
         width: 0,
       });
-
-      // Animate the vertical line
+      
       gsap.to(".theline", {
         scrollTrigger: {
           trigger: ".x1",
           start: "top top",
-          end: "bottom top",
+          end: "bottom top", // keep percentage-based for consistent results
           scrub: true,
         },
         ease: "power1.in",
         height: "98%",
         opacity: 1,
       });
+      
     }
   }, []);
 
