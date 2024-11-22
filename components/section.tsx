@@ -20,7 +20,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top top",
-          end: "+=200vw",
+          end: "+=2000px",
           pin: true,
           pinSpacing: false,
           scrub: true,
@@ -31,7 +31,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "+=240vw",
+          end: "+=2400px",
           scrub: true,
         },
         scale: 2.8,
@@ -41,7 +41,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "+=300vw",
+          end: "+=3000px",
           scrub: true,
         },
         width: width,
@@ -53,7 +53,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".text-container",
           start: "top top",
-          end: "+=200vw",
+          end: "+=2000px",
           pin: true,
           pinSpacing: true,
         },
@@ -64,7 +64,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".text-container",
           start: "top top",
-          end: "+=100vw",
+          end: "+=1000px",
           scrub: true,
         },
         ease: "power4.out",
