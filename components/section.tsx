@@ -97,9 +97,9 @@ const Section = () => {
       </div>
 
       <div className="text-container absolute z-50 h-[100vh] flex items-center justify-center overflow-hidden w-[200vw] ml-[-50%]">
-        <span className="text1 font-[ade] text-[255px] pl-[50px]">SHOW</span>
+        <span className="text1 font-[ade] text-[10vw] pl-[50px]">SHOW</span>
         <div className="space-between-words w-[250vw] bg-slate-50 z-50 h-[0px] opacity-50"></div>
-        <span className="text2 font-[nohemi] text-[280px]">WORK</span>
+        <span className="text2 font-[nohemi] text-[11vw]">WORK</span>
       </div>
 
       <div className="object-container w-full h-[100vh] flex items-center justify-center absolute overflow-hidden">

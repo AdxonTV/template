@@ -6,7 +6,7 @@ interface text {
 }
 const Button: React.FC<text> = ({ text, image }) => {
   return (
-    <div className="  bg-slate-50 text-black rounded-md px-3 flex  items-center">
+    <div className="  bg-slate-50 text-black rounded-[0.2vw] px-3 flex  items-center">
         <div className="text-[0.7vw]">
       <div
         className="text-[10px] w-full flex justify-between

@@ -8,9 +8,14 @@ const Navbar = () => {
       <span>
         <div>Located in Poland</div>
         <div >North Dakota</div>
+
       </span>
-      <span>(Warsaw, Ochota)</span>
+      <span><div>(Warsaw, Ochota)</div>
+     
+      </span>
+      <span>
       <ClockMechanism/>
+      <div >@Andrew_Nicko</div></span>
       <Button text="BOOK AN EXPIRIENCE" image="/images/LINEUP.svg"></Button>
 
     </nav>

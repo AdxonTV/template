@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="nav-footer items-end bottom-0 text-[14px] " >
+    <footer className="nav-footer items-end bottom-0 text-[0.6vw] " >
         <div className="flex  gap-48">
       <span className="w-[450px]">
         YOUR BRAND IS ALREADY BETTER THAN COMPETITION YOU JUST HAVE TO PROVE IT.
