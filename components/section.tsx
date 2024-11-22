@@ -12,65 +12,65 @@ const Section = () => {
     if (typeof window !== "undefined") {
       // Refresh ScrollTrigger after a short delay to account for all elements being loaded
       setTimeout(() => ScrollTrigger.refresh(), 1500);
-
+  
       const { innerHeight: height, innerWidth: width } = window;
-
+  
       // PHOTO animation setup
       gsap.to(".x1", {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top top",
-          end: "+=2000px",
+          end: "200vh",
           pin: true,
           pinSpacing: false,
           scrub: true,
         },
       });
-
+  
       gsap.to(".x1", {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "+=2400px",
+          end: "240vh",
           scrub: true,
         },
         scale: 2.8,
       });
-
+  
       gsap.to(".x-container", {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "+=3000px",
+          end: "300vh",
           scrub: true,
         },
         width: width,
         height: height,
       });
-
+  
       // Pinning and animating the text container
       gsap.to(".text-container", {
         scrollTrigger: {
           trigger: ".text-container",
           start: "top top",
-          end: "+=2000px",
+          end: "200vh",
           pin: true,
           pinSpacing: true,
         },
       });
-
+  
       // Animate the space between words
       gsap.to(".space-between-words", {
         scrollTrigger: {
           trigger: ".text-container",
           start: "top top",
-          end: "+=1000px",
+          end: "100vh",
           scrub: true,
         },
         ease: "power4.out",
         width: 0,
       });
-
+  
       // Animate the vertical line
       gsap.to(".theline", {
         scrollTrigger: {
@@ -85,6 +85,7 @@ const Section = () => {
       });
     }
   }, []);
+  
 
   return (
     <div className="w-full h-[390vh] relative overflow-hidden text-[350px] z-[100] bg-black">
