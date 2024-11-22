@@ -15,7 +15,8 @@ const Navbar = () => {
       </span>
       <span>
       <ClockMechanism/>
-      <div >@Andrew_Nicko</div></span>
+      <div >@Andrew_Nicko</div>
+      </span>
       <Button text="BOOK AN EXPIRIENCE" image="/images/LINEUP.svg"></Button>
 
     </nav>
