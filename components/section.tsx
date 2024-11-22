@@ -20,7 +20,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top top",
-          end: "+=444vh", // 2000px in vh
+          end: "+=644vh", // 2000px in vh
           pin: true,
           pinSpacing: false,
           scrub: true,
@@ -31,7 +31,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "+=522vh", // 2400px in vh
+          end: "bottom bottom", // 2400px in vh
           scrub: true,
         },
         scale: 2.8,
@@ -39,9 +39,9 @@ const Section = () => {
       
       gsap.to(".x-container", {
         scrollTrigger: {
-          trigger: ".object-container",
+          trigger: ".x-container",
           start: "top bottom",
-          end: "+=333.33vh", // 3000px in vh
+          end: "bottom bottom", // 3000px in vh
           scrub: true,
         },
         width: width,
@@ -52,7 +52,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".text-container",
           start: "top top",
-          end: "+=444vh", // 2000px in vh
+          end: "+=644vh", // 2000px in vh
           pin: true,
           pinSpacing: true,
         },
@@ -62,7 +62,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".text-container",
           start: "top top",
-          end: "+=222vh", // 1000px in vh
+          end: "bottom top", // 1000px in vh
           scrub: true,
         },
         ease: "power4.out",
@@ -85,7 +85,7 @@ const Section = () => {
   }, []);
 
   return (
-    <div className="w-full h-[390vh] relative overflow-hidden text-[350px] z-[100] bg-black">
+    <div className="w-full h-[300vh] relative overflow-hidden text-[350px] z-[100] bg-black">
       <div className="text-[8.4vw] tracking-tighter border-solid leading-[15vw] border-b-2 border-t-2 font-[nohemi] border-white">
         WORKING ON PROJECTS®
       </div>
