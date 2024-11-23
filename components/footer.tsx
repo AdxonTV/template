@@ -19,7 +19,7 @@ const Footer = () => {
       </span>
       </div>
 
-      <div className="flex gap-16"> 
+      <div className="flex font-bold gap-16"> 
       <span>BEHANCE</span>
       <span>DRIBBLE</span>
       <span>AWWWARDS</span>

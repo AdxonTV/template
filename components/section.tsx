@@ -20,7 +20,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top top",
-          end: "+=2000px",
+          end: "+=200vh",
           pin: true,
           pinSpacing: false,
           scrub: true,
@@ -31,7 +31,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "+=2400px",
+          end: "+=240vh",
           scrub: true,
         },
         scale: 2.8,
@@ -41,7 +41,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "+=3000px",
+          end: "+=300vh",
           scrub: true,
         },
         width: width,
@@ -53,7 +53,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".text-container",
           start: "top top",
-          end: "+=2000px",
+          end: "+=200vh",
           pin: true,
           pinSpacing: true,
         },
@@ -64,7 +64,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".text-container",
           start: "top top",
-          end: "+=1000px",
+          end: "+=100vh",
           scrub: true,
         },
         ease: "power4.out",
@@ -93,7 +93,7 @@ const Section = () => {
       <div className="text-[8.4vw] tracking-tighter border-solid leading-[15vw] border-b-2 border-t-2 font-[nohemi] border-white">
         WORKING ON PROJECTS®
       </div> 
-  
+    
 
       <div className="w-[100vw] absolute h-[0] theline flex justify-center">
         <div className="theline z-[10000] h-full w-[2px] bg-white"></div>
@@ -109,8 +109,8 @@ const Section = () => {
         <div className="h-[80vh] x-container w-[90%] overflow-hidden flex justify-center">
           <video
             className="x1 opacity-75"
-            width={1000}
-            height={500}
+            width={`1000vh`}
+            height={`1000vh`}
             autoPlay
             loop
             muted

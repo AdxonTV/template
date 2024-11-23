@@ -7,7 +7,7 @@ const Navbar = () => {
       <span>(ANGEL/STUDIO)®</span>
       <span>
         <div>Located in Poland</div>
-        <div >North Dakota</div>
+        <div className="font-bold">North Dakota</div>
 
       </span>
       <span><div>(Warsaw, Ochota)</div>
@@ -15,7 +15,7 @@ const Navbar = () => {
       </span>
       <span>
       <ClockMechanism/>
-      <div >@Andrew_Nicko</div>
+      <div className="font-bold">@Andrew_Nicko</div>
       </span>
       <Button text="BOOK AN EXPIRIENCE" image="/images/LINEUP.svg"></Button>
 

@@ -4,10 +4,10 @@
   import { gsap } from "gsap";
   import ScrollTrigger from "gsap/src/ScrollTrigger";
   import Lenis from "lenis";
-
+import Aboutpage from "@/components/aboutpage";
   import Works from "@/components/works";
   import MainSection from "@/components/main-section";
-
+import Down from "@/components/down";
   // Register GSAP ScrollTrigger plugin
   gsap.registerPlugin(ScrollTrigger);
 
@@ -63,9 +63,9 @@
         <div className="text-[8.4vw] tracking-tighter border-solid bg-black leading-[15vw] border-b-2 border-t-2 font-[nohemi] border-white"> WORKING ON PROJECTS®</div> 
         </div> */}
     return (
-      <div  ref={scrollRef} style={{ height: "1000vh", overflow: "hidden" }}>
+      <div  ref={scrollRef} >
 
-        <div className="flex-col">
+       
 
         <MainSection></MainSection>
       
@@ -73,12 +73,12 @@
 
           <Works></Works> 
     
+          <Aboutpage></Aboutpage>
       
-      
-        
+        <Down></Down>
         
 
-        </div>
+      
       </div>
     );
   }
