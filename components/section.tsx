@@ -20,76 +20,80 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top top",
-          end: "+=644vh", // 2000px in vh
+          end: "+=2000px",
           pin: true,
           pinSpacing: false,
           scrub: true,
         },
       });
-      
+
       gsap.to(".x1", {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "bottom bottom", // 2400px in vh
+          end: "+=2400px",
           scrub: true,
         },
         scale: 2.8,
       });
-      
+
       gsap.to(".x-container", {
         scrollTrigger: {
-          trigger: ".x-container",
+          trigger: ".object-container",
           start: "top bottom",
-          end: "bottom bottom", // 3000px in vh
+          end: "+=3000px",
           scrub: true,
         },
         width: width,
         height: height,
       });
-      
+
+      // Pinning and animating the text container
       gsap.to(".text-container", {
         scrollTrigger: {
           trigger: ".text-container",
           start: "top top",
-          end: "+=644vh", // 2000px in vh
+          end: "+=2000px",
           pin: true,
           pinSpacing: true,
         },
       });
-      
+
+      // Animate the space between words
       gsap.to(".space-between-words", {
         scrollTrigger: {
           trigger: ".text-container",
           start: "top top",
-          end: "bottom top", // 1000px in vh
+          end: "+=1000px",
           scrub: true,
         },
         ease: "power4.out",
         width: 0,
       });
-      
+
+      // Animate the vertical line
       gsap.to(".theline", {
         scrollTrigger: {
           trigger: ".x1",
           start: "top top",
-          end: "bottom top", // keep percentage-based for consistent results
+          end: "bottom top",
           scrub: true,
         },
         ease: "power1.in",
         height: "98%",
         opacity: 1,
       });
-      
     }
   }, []);
 
   return (
+ 
     <div className="w-full h-[300vh] relative overflow-hidden text-[350px] z-[100] bg-black">
+        
       <div className="text-[8.4vw] tracking-tighter border-solid leading-[15vw] border-b-2 border-t-2 font-[nohemi] border-white">
         WORKING ON PROJECTS®
-      </div>
-   
+      </div> 
+  
 
       <div className="w-[100vw] absolute h-[0] theline flex justify-center">
         <div className="theline z-[10000] h-full w-[2px] bg-white"></div>
