@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+
 const Aboutpage = () => {
   return (
     <div className="h-[100vh]  bg-black">
