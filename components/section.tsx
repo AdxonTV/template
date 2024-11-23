@@ -31,7 +31,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "+=960vh", // Converted from 2400px
+          end: "+=1000vh", // Converted from 2400px
           scrub: true,
         },
         scale: 2.8,
@@ -41,7 +41,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "+=1200vh", // Converted from 3000px
+          end: "+=1500vh", // Converted from 3000px
           scrub: true,
         },
         width: width,
