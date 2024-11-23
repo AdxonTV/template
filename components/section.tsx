@@ -20,7 +20,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top top",
-          end: "+=200vh", // Converted from 2000px
+          end: "+=400vh", // Converted from 2000px
           pin: true,
           pinSpacing: false,
           scrub: true,
@@ -31,7 +31,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "+=240vh", // Converted from 2400px
+          end: "+=480vh", // Converted from 2400px
           scrub: true,
         },
         scale: 2.8,
@@ -41,7 +41,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "+=300vh", // Converted from 3000px
+          end: "+=600vh", // Converted from 3000px
           scrub: true,
         },
         width: width,
@@ -53,7 +53,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".text-container",
           start: "top top",
-          end: "+=200vh", // Converted from 2000px
+          end: "+=400vh", // Converted from 2000px
           pin: true,
           pinSpacing: true,
         },
@@ -64,7 +64,7 @@ const Section = () => {
         scrollTrigger: {
           trigger: ".text-container",
           start: "top top",
-          end: "+=100vh", // Converted from 1000px
+          end: "+=200vh", // Converted from 1000px
           scrub: true,
         },
         ease: "power4.out",
