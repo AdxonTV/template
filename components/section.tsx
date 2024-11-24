@@ -27,9 +27,9 @@ const Section = () => {
         },
       });
   
-      const mm = gsap.matchMedia(); // Initialize matchMedia
+      // const mm = gsap.matchMedia(); // Initialize matchMedia
 
-      mm.add("(min-width: 2804px)", () => {
+      // mm.add("(min-width: 2804px)", () => {
         // Desktop scale animation
         gsap.to(".x1", {
           scrollTrigger: {
@@ -38,48 +38,48 @@ const Section = () => {
             end: "+=2800vh", // Converted from 2400px
             scrub: true,
           },
-          scale: 7,
+          scale: 3,
         });
-      });
+      // });
 
-      mm.add("(min-width: 2024px) and (max-width: 28003px)", () => {
-        // Tablet scale animation
-        gsap.to(".x1", {
-          scrollTrigger: {
-            trigger: ".object-container",
-            start: "top bottom",
-            end: "+=1500vh",
-            scrub: true,
-          },
-          scale: 2.5,
-        });
-      });
+      // mm.add("(min-width: 2024px) and (max-width: 28003px)", () => {
+      //   // Tablet scale animation
+      //   gsap.to(".x1", {
+      //     scrollTrigger: {
+      //       trigger: ".object-container",
+      //       start: "top bottom",
+      //       end: "+=1500vh",
+      //       scrub: true,
+      //     },
+      //     scale: 2.5,
+      //   });
+      // });
     
-      mm.add("(min-width: 768px) and (max-width: 2023px)", () => {
-        // Tablet scale animation
-        gsap.to(".x1", {
-          scrollTrigger: {
-            trigger: ".object-container",
-            start: "top bottom",
-            end: "+=1500vh",
-            scrub: true,
-          },
-          scale: 2.5,
-        });
-      });
+      // mm.add("(min-width: 768px) and (max-width: 2023px)", () => {
+      //   // Tablet scale animation
+      //   gsap.to(".x1", {
+      //     scrollTrigger: {
+      //       trigger: ".object-container",
+      //       start: "top bottom",
+      //       end: "+=1500vh",
+      //       scrub: true,
+      //     },
+      //     scale: 2.5,
+      //   });
+      // });
     
-      mm.add("(max-width: 767px)", () => {
-        // Mobile scale animation
-        gsap.to(".x1", {
-          scrollTrigger: {
-            trigger: ".object-container",
-            start: "top bottom",
-            end: "+=1000vh",
-            scrub: true,
-          },
-          scale: 2,
-        });
-      });
+      // mm.add("(max-width: 767px)", () => {
+      //   // Mobile scale animation
+      //   gsap.to(".x1", {
+      //     scrollTrigger: {
+      //       trigger: ".object-container",
+      //       start: "top bottom",
+      //       end: "+=1000vh",
+      //       scrub: true,
+      //     },
+      //     scale: 2,
+      //   });
+      // });
   
   
       gsap.to(".x-container", {
@@ -154,9 +154,8 @@ const Section = () => {
       <div className="object-container w-full h-[100vh] flex items-center justify-center absolute overflow-hidden">
         <div className="h-[80vh]  x-container w-[90%] overflow-hidden flex justify-center">
           <video
-            className="x1 opacity-75"
-            width={`1000vh`}
-            height={`1000vh`}
+            className="x1 w-[50vw] opacity-75"
+      
             autoPlay
             loop
             muted

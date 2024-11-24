@@ -5,7 +5,7 @@ const BackgroundImage = () => {
     <div className="box  -z-50 absolute ">
 
       <Image
-        className=" opacity-30 mt-[-450px]"
+        className=" opacity-30 mt-[-25vh]"
         width={1000}
  
         height={500}  style={{ filter: "grayscale(100%)"}}

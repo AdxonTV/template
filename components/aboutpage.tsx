@@ -1,12 +1,20 @@
 import React from "react";
-
+import Image from "next/image";
 const Aboutpage = () => {
   return (
     <div className="h-[100vh] z-[100] relative bg-black">
       <div className="flex items-center h-full    px-[0.8vw]">
         <div>
           <div className="flex w-full ">
-            <div className="bg-gray-700 w-[28vw] h-[56vh]"></div>
+            <div className="bg-gray-700 overflow-hidden w-[28vw] h-[56vh]">
+              {" "}
+              <Image
+                src={"/images/worker.jpg"}
+                width={1000}
+                height={1000}
+                alt="xxx"
+              ></Image>
+            </div>
 
             <div className="  w-full ml-[1.2vw] text-[1vw]  flex flex-col">
               <div className="flex w-full  justify-between">
