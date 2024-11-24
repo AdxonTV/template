@@ -2,7 +2,7 @@ import React from "react";
 
 const Aboutpage = () => {
   return (
-    <div className="h-[100vh]  bg-black">
+    <div className="h-[100vh] z-[100] relative bg-black">
       <div className="flex items-center h-full    px-[0.8vw]">
         <div>
           <div className="flex w-full ">

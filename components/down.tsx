@@ -2,7 +2,7 @@ import React from 'react'
 
 const Down = () => {
   return (
-    <div className='flex items-center h-[100vh] w-[100vw]  bg-black'>
+    <div className='flex items-center h-[100vh] z-[100] relative bg-black w-[100vw] '>
         
         <div className='w-1/2 h-full '></div>
 
