@@ -1,92 +1,78 @@
-  "use client"; // Ensure that this code runs only on the client side.
-  import Section from "@/components/section";
-  import { useEffect, useRef, useState } from "react";
-  import { gsap } from "gsap";
-  import ScrollTrigger from "gsap/src/ScrollTrigger";
-  import Lenis from "lenis";
+"use client"; // Ensure that this code runs only on the client side.
+import Section from "@/components/section";
+import { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/src/ScrollTrigger";
+import Lenis from "lenis";
 import Aboutpage from "@/components/aboutpage";
-  import Works from "@/components/works";
-  import MainSection from "@/components/main-section";
-import Down from "@/components/down";
-  // Register GSAP ScrollTrigger plugin
-  gsap.registerPlugin(ScrollTrigger);
+import Works from "@/components/works";
+import MainSection from "@/components/main-section";
 
-  export default function Home() {
-    const [isLoading, setIsLoading] = useState(true);
-    const scrollRef = useRef<HTMLDivElement>(null);
+// Register GSAP ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
-    // Handle loading state
+export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
+  // Handle loading state
 
-    useEffect(() => {
-      if (isLoading) {
-        document.body.style.overflow = "hidden"; // Disable scrolling during loading
-      } else {
-        document.body.style.overflow = ""; // Re-enable scrolling after loading
-      }
+  useEffect(() => {
+    if (isLoading) {
+      document.body.style.overflow = "hidden"; // Disable scrolling during loading
+    } else {
+      document.body.style.overflow = ""; // Re-enable scrolling after loading
+    }
 
-      setTimeout(() => {
-        setIsLoading(false); // Set loading to false once the page is ready
-        document.body.style.cursor = "default"; // Reset cursor
-      }, 1000); // Adjust the timeout for your needs
-    }, [isLoading]);
+    setTimeout(() => {
+      setIsLoading(false); // Set loading to false once the page is ready
+      document.body.style.cursor = "default"; // Reset cursor
+    }, 1000); // Adjust the timeout for your needs
+  }, [isLoading]);
 
-    // Initialize Lenis and ScrollTrigger after the page is loaded
-    useEffect(() => {
-      if (!isLoading && scrollRef.current) {
-        const lenis = new Lenis({
-          // Optional Lenis options
-          lerp: 0.05,         // Controls the smoothness of scrolling
-    touchMultiplier: 1, // Sensitivity of touch scrolling (used for touch events)
+  // Initialize Lenis and ScrollTrigger after the page is loaded
+  useEffect(() => {
+    if (!isLoading && scrollRef.current) {
+      const lenis = new Lenis({
+        // Optional Lenis options
+        lerp: 0.05, // Controls the smoothness of scrolling
+        touchMultiplier: 1, // Sensitivity of touch scrolling (used for touch events)
+      });
 
-        });
+      // Ensure ScrollTrigger works with Lenis scroll
+      lenis.on("scroll", ScrollTrigger.update); // Make ScrollTrigger update on Lenis scroll
 
-        
+      // Sync GSAP ticker with Lenis
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
 
-        // Ensure ScrollTrigger works with Lenis scroll
-        lenis.on("scroll", ScrollTrigger.update); // Make ScrollTrigger update on Lenis scroll
+      // Disable smoothing in GSAP for smoother interaction with Lenis
+      gsap.ticker.lagSmoothing(0);
 
-        // Sync GSAP ticker with Lenis
-        gsap.ticker.add((time) => {
-          lenis.raf(time * 1000);
-        });
+      // Optional: Setup ScrollTrigger defaults for Lenis
+      ScrollTrigger.defaults({
+        scroller: scrollRef.current, // Tell ScrollTrigger to use Lenis scroll container
+      });
+    }
+  }, [isLoading]);
 
-        // Disable smoothing in GSAP for smoother interaction with Lenis
-        gsap.ticker.lagSmoothing(0);
-
-        // Optional: Setup ScrollTrigger defaults for Lenis
-        ScrollTrigger.defaults({
-          scroller: scrollRef.current, // Tell ScrollTrigger to use Lenis scroll container
-        });
-      }
-    }, [isLoading]);
-  
-  {/* <div className="  h-[100vh]">
+  {
+    /* <div className="  h-[100vh]">
         <div className="text-[8.4vw] tracking-tighter border-solid bg-black leading-[15vw] border-b-2 border-t-2 font-[nohemi] border-white"> WORKING ON PROJECTS®</div> 
-        </div> */}
-    return (
-      <div  ref={scrollRef} >
-
-       
-
-        <MainSection></MainSection>
-      
-          <Section></Section>
-
-          <Works></Works> 
-    
-          <Aboutpage></Aboutpage>
-      
-      
-
-        <div className="h-[100vh]">
-
-
-
-        </div>
-        
-
-      
-      </div>
-    );
+        </div> */
   }
+  return (
+    <div ref={scrollRef}>
+      <MainSection></MainSection>
+
+      <Section></Section>
+
+      <Works></Works>
+
+      <Aboutpage></Aboutpage>
+
+      <div className="h-[100vh]"></div>
+    </div>
+  );
+}
