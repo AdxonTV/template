@@ -27,21 +27,66 @@ const Section = () => {
         },
       });
   
-      gsap.to(".x1", {
-        scrollTrigger: {
-          trigger: ".object-container",
-          start: "top bottom",
-          end: "+=1000vh", // Converted from 2400px
-          scrub: true,
-        },
-        scale: 2.8,
+      const mm = gsap.matchMedia(); // Initialize matchMedia
+
+      mm.add("(min-width: 2804px)", () => {
+        // Desktop scale animation
+        gsap.to(".x1", {
+          scrollTrigger: {
+            trigger: ".object-container",
+            start: "top bottom",
+            end: "+=2800vh", // Converted from 2400px
+            scrub: true,
+          },
+          scale: 7,
+        });
       });
+
+      mm.add("(min-width: 2024px) and (max-width: 28003px)", () => {
+        // Tablet scale animation
+        gsap.to(".x1", {
+          scrollTrigger: {
+            trigger: ".object-container",
+            start: "top bottom",
+            end: "+=1500vh",
+            scrub: true,
+          },
+          scale: 2.5,
+        });
+      });
+    
+      mm.add("(min-width: 768px) and (max-width: 2023px)", () => {
+        // Tablet scale animation
+        gsap.to(".x1", {
+          scrollTrigger: {
+            trigger: ".object-container",
+            start: "top bottom",
+            end: "+=1500vh",
+            scrub: true,
+          },
+          scale: 2.5,
+        });
+      });
+    
+      mm.add("(max-width: 767px)", () => {
+        // Mobile scale animation
+        gsap.to(".x1", {
+          scrollTrigger: {
+            trigger: ".object-container",
+            start: "top bottom",
+            end: "+=1000vh",
+            scrub: true,
+          },
+          scale: 2,
+        });
+      });
+  
   
       gsap.to(".x-container", {
         scrollTrigger: {
           trigger: ".object-container",
           start: "top bottom",
-          end: "+=1500vh", // Converted from 3000px
+          end: "+=2000vh", // Converted from 3000px
           scrub: true,
         },
         width: width,
@@ -89,7 +134,7 @@ const Section = () => {
 
   return (
  
-    <div className="w-full h-[300vh] relative overflow-hidden text-[350px] z-[100] bg-black">
+    <div className="w-full h-[300vh] relative overflow-hidden text-[350px] father-container z-[100] bg-black">
         
       <div className="text-[8.4vw] tracking-tighter border-solid leading-[15vw] border-b-2 border-t-2 font-[nohemi] border-white">
         WORKING ON PROJECTS®
@@ -101,13 +146,13 @@ const Section = () => {
       </div>
 
       <div className="text-container absolute z-50 h-[100vh] flex items-center justify-center overflow-hidden w-[200vw] ml-[-50%]">
-        <span className="text1 font-[ade] text-[10vw] pl-[50px]">SHOW</span>
+        <span className="text1 font-[ade] text-[10vw]  pl-[1.9vw]">SHOW</span>
         <div className="space-between-words w-[250vw] bg-slate-50 z-50 h-[0px] opacity-50"></div>
-        <span className="text2 font-[nohemi] text-[11vw]">WORK</span>
+        <span className="text2 font-[nohemi]   text-[11vw]">WORK</span>
       </div>
 
       <div className="object-container w-full h-[100vh] flex items-center justify-center absolute overflow-hidden">
-        <div className="h-[80vh] x-container w-[90%] overflow-hidden flex justify-center">
+        <div className="h-[80vh]  x-container w-[90%] overflow-hidden flex justify-center">
           <video
             className="x1 opacity-75"
             width={`1000vh`}

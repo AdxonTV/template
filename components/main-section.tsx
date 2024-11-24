@@ -47,7 +47,7 @@ const MainSection = () => {
 
 
   return (
-    <div className='relative  h-[100vh]'>
+    <div className='relative w-full  h-[100vh]'>
     <div
     className="fixed
 z-[1000]"
@@ -57,13 +57,13 @@ z-[1000]"
 
   <div className="w-20  h-20 check  absolute bottom-0"></div>
 
-  <div className="bottom-0 -z-10 fixed">
+  <div className="top-[80vh]   fixed">
     <MainText text="EXPLORE." text2="(STUDIO)" />
 
     <Footer />
   </div>
 
-  <div className=" justify-center relative flex w-full">
+  <div className=" justify-center  absolute w-full">
     <BackgroundImage />
   </div></div>
   )
