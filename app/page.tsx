@@ -16,6 +16,8 @@ import Down from "@/components/down";
     const scrollRef = useRef<HTMLDivElement>(null);
 
     // Handle loading state
+
+
     useEffect(() => {
       if (isLoading) {
         document.body.style.overflow = "hidden"; // Disable scrolling during loading
@@ -75,9 +77,13 @@ import Down from "@/components/down";
     
           <Aboutpage></Aboutpage>
       
-        <Down></Down>
+      
 
-        <div className="h-[100vh]"></div>
+        <div className="h-[100vh]">
+
+
+
+        </div>
         
 
       
