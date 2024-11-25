@@ -7,7 +7,7 @@ import Lenis from "lenis";
 import Aboutpage from "@/components/aboutpage";
 import Works from "@/components/works";
 import MainSection from "@/components/main-section";
-import Down from "@/components/down";
+
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
