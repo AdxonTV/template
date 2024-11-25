@@ -21,11 +21,12 @@ useEffect(()=>{
       scrub:true,
       start: "top bottom",
       end: "bottom top", // Converted from 2000px
-      pin: false,
-      pinSpacing: false,
+    
 
     },
-    y:"-5vh"
+    y:"5vh",
+
+  
 
   } )
 
@@ -75,31 +76,26 @@ useEffect(()=>{
       <div className="flex items-center h-full    px-[1vw]">
         <div>
           <div className="flex w-full ">
-            <div className="bg-gray-700 overflow-hidden w-[28vw] h-[56vh]">
-              {" "}
-              <Image
-            className="imagemove w-[50vw] translate-y-[-13vh]"
-              style={{ filter: "grayscale(50%)"}}
-                src={"/images/worker.jpg"}
-                width={1000}
-                height={1000}
-                alt="xxx"
-              ></Image>
-            </div>
+          <div className="bg-gray-700 relative overflow-hidden w-[28vw] h-[60vh]">
+            <div className="bg-gray-700 relative overflow-hidden top-[-20%] w-[28vw] h-[80vh]">
+  {" "}
+  <Image
+    className="imagemove  w-[150vw] translate-y-[-7vh] absolute"
+    style={{ filter: "grayscale(50%)" }}
+    
+    src={"/images/worker.jpg"}
+    layout="fill" // Dynamically scale to fit parent dimensions
+    objectFit="cover" // Ensure it covers the container
+    alt="xxx"
+  ></Image>
+</div></div>
 
             <div className="  w-full ml-[1.2vw] text-[0.9vw]  flex flex-col">
               <div className="flex w-full  justify-between">
                 <div>
                   <div className="font-[600] leading-[110%]">CO-FOUNDER-CREATIVE <br />DIRECTOR</div>
                   <div className="font-[ade]">UNREAL STUDIO</div>
-                  <Image
-        
-              className="w-[17vw] left-[54.5vw] top-[57vh] absolute"
-                src={"/images/Vector 12.png"}
-                width={1000}
-                height={1000}
-                alt="xxx"
-              ></Image>
+                
                 </div>
                 <div className="border-t border-white">(Working sinc 2009)</div>
               </div>
