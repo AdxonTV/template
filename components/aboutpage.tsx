@@ -39,7 +39,7 @@ useEffect(()=>{
       gsap.from(text.chars, {
         scrollTrigger: {
           trigger: char,
-          start: 'top top',
+          start: 'top bottom',
           end: 'top 40%',
           scrub:true,
       
@@ -70,7 +70,7 @@ useEffect(()=>{
 },[])
 
   return (
-    <div  className="h-[100vh] z-[100] decontan relative bg-black">
+    <div  className="h-[100vh] z-[100] decontan relative dekonteiner bg-black">
       <div className="absolute w-2 h-full mark"></div>
       <div className="flex items-center h-full    px-[1vw]">
         <div>
