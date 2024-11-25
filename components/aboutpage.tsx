@@ -43,7 +43,7 @@ useEffect(()=>{
           end: 'top 40%',
           scrub:true,
       
-          markers: true,
+          markers: false,
         },
 
         opacity:0.2,
