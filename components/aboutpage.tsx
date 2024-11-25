@@ -94,7 +94,7 @@ useEffect(()=>{
                   <div className="font-[ade]">UNREAL STUDIO</div>
                   <Image
         
-              className="w-[17vw] left-[54.5vw] top-[57vh] absolute"
+              className="w-[17vw] left-[53.5vw] top-[57vh] absolute"
                 src={"/images/Vector 12.png"}
                 width={1000}
                 height={1000}
@@ -107,7 +107,7 @@ useEffect(()=>{
               <div className="h-full"></div>
 
               <span className="text-[3.5vw]  leading-[100%]  w-full">
-                "In my 15 years as a designer, OMMO is the key
+              &#34;In my 15 years as a designer, OMMO is the key
               </span>
             </div>
           </div>
@@ -115,7 +115,7 @@ useEffect(()=>{
           <div className="text-[3.5vw] opacity-100    textopacity leading-[100%]">
             development partner who genuinely makes my job easier.Their ability for done
             to consistently deliver allows me to focus on design, knowing the
-            development is in reliable hands."
+            development is in reliable hands.&#34;
           </div>
         </div>
       </div>
