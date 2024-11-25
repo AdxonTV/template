@@ -20,7 +20,7 @@ useEffect(()=>{
       trigger:".mark",
       scrub:true,
       start: "top bottom",
-      end: "bottom bottom", // Converted from 2000px
+      end: "bottom top", // Converted from 2000px
       pin: false,
       pinSpacing: false,
 
@@ -39,11 +39,11 @@ useEffect(()=>{
       gsap.from(text.chars, {
         scrollTrigger: {
           trigger: char,
-          start: 'top 90%',
-          end: 'top 50%',
+          start: 'top top',
+          end: 'top 40%',
           scrub:true,
       
-          markers: false,
+          markers: true,
         },
 
         opacity:0.2,
