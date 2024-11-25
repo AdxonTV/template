@@ -107,7 +107,7 @@ useEffect(()=>{
               <div className="h-full"></div>
 
               <span className="text-[3.5vw]  leading-[100%]  w-full">
-                In my 15 years as a designer, OMMO is the key
+                "In my 15 years as a designer, OMMO is the key
               </span>
             </div>
           </div>
@@ -115,7 +115,7 @@ useEffect(()=>{
           <div className="text-[3.5vw] opacity-100    textopacity leading-[100%]">
             development partner who genuinely makes my job easier.Their ability for done
             to consistently deliver allows me to focus on design, knowing the
-            development is in reliable hands.
+            development is in reliable hands."
           </div>
         </div>
       </div>
