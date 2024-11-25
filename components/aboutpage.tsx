@@ -94,7 +94,7 @@ useEffect(()=>{
                   <div className="font-[ade]">UNREAL STUDIO</div>
                   <Image
         
-              className="w-[17vw] left-[53.5vw] top-[57vh] absolute"
+              className="w-[17vw] left-[54.5vw] top-[57vh] absolute"
                 src={"/images/Vector 12.png"}
                 width={1000}
                 height={1000}
