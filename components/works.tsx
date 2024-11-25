@@ -2,7 +2,7 @@ import React from "react";
 import WorksTitle from "./works-title-left";
 import gsap from "gsap";
 import { useEffect } from "react";
-import ScrollTrigger from "gsap/src/ScrollTrigger";
+
 import WorksTitleRight from "./works-title-right";
 
 const Works=()=> {
