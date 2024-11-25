@@ -119,7 +119,7 @@ useEffect(()=>{
           </div>
         </div>
       </div>
-      <div>(FOREVERROLLING)</div>
+     
     </div>
   );
 };
