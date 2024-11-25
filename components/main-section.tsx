@@ -5,6 +5,7 @@ import Navbar from './navbar'
 import Footer from './footer'
 import { useEffect } from 'react'
 import gsap from 'gsap'
+
 const MainSection = () => {
   useEffect(() => {
     gsap.to(".box", {
@@ -47,7 +48,7 @@ const MainSection = () => {
 
 
   return (
-    <div className='relative w-full  h-[100vh]'>
+    <div  className='relative w-full  h-[100vh]'>
     <div
     className="fixed
 z-[1000]"

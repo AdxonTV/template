@@ -2,7 +2,11 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
+import SplitType from "split-type";
+
 gsap.registerPlugin(ScrollTrigger);
+
+
 const Aboutpage = () => {
 
 
@@ -26,26 +30,47 @@ useEffect(()=>{
   } )
 
 
+  const splitTypes = document.querySelectorAll('.textopacity');
+
+  splitTypes.forEach((char) => {
+    if (char instanceof HTMLElement) {
+      const text = new SplitType(char, { types: 'chars' });
+  
+      gsap.from(text.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 90%',
+          end: 'top 50%',
+          scrub:true,
+      
+          markers: false,
+        },
+
+        opacity:0.2,
+        stagger: 0.1,
+      });
+    }
+  });
 
   
-  gsap.to(".textopacity",{
+  // gsap.to(".textopacity",{
 
-    scrollTrigger:{
-      trigger:".mark",
-      scrub:true,
-      start: "center bottom",
-      end: "bottom center", // Converted from 2000px
-      pin: false,
-      pinSpacing: false,
+  //   scrollTrigger:{
+  //     trigger:".mark",
+  //     scrub:true,
+  //     start: "center bottom",
+  //     end: "bottom center", // Converted from 2000px
+  //     pin: false,
+  //     pinSpacing: false,
 
-    },
-    opacity:"100%"
+  //   },
+  //   opacity:"100%"
 
-  } )
+  // } )
 },[])
 
   return (
-    <div className="h-[100vh] z-[100] decontan relative bg-black">
+    <div  className="h-[100vh] z-[100] decontan relative bg-black">
       <div className="absolute w-2 h-full mark"></div>
       <div className="flex items-center h-full    px-[1vw]">
         <div>
@@ -87,7 +112,7 @@ useEffect(()=>{
             </div>
           </div>
 
-          <div className="text-[3.5vw] opacity-0 textopacity leading-[100%]">
+          <div className="text-[3.5vw] opacity-100    textopacity leading-[100%]">
             development partner who genuinely makes my job easier.Their ability for done
             to consistently deliver allows me to focus on design, knowing the
             development is in reliable hands.

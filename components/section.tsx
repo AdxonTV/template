@@ -6,7 +6,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 // Register ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-const Section = () => {
+const Section=() => {
   useEffect(() => {
     // Check if window object is available to avoid SSR issues
     if (typeof window !== "undefined") {

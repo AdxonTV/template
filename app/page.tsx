@@ -7,7 +7,7 @@ import Lenis from "lenis";
 import Aboutpage from "@/components/aboutpage";
 import Works from "@/components/works";
 import MainSection from "@/components/main-section";
-
+import Down from "@/components/down";
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,6 +16,7 @@ export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   // Handle loading state
+
 
   useEffect(() => {
     if (isLoading) {
@@ -35,9 +36,12 @@ export default function Home() {
     if (!isLoading && scrollRef.current) {
       const lenis = new Lenis({
         // Optional Lenis options
-        lerp: 0.05, // Controls the smoothness of scrolling
-        touchMultiplier: 1, // Sensitivity of touch scrolling (used for touch events)
+        lerp: 0.05,         // Controls the smoothness of scrolling
+  touchMultiplier: 1, // Sensitivity of touch scrolling (used for touch events)
+
       });
+
+      
 
       // Ensure ScrollTrigger works with Lenis scroll
       lenis.on("scroll", ScrollTrigger.update); // Make ScrollTrigger update on Lenis scroll
@@ -57,22 +61,32 @@ export default function Home() {
     }
   }, [isLoading]);
 
-  {
-    /* <div className="  h-[100vh]">
-        <div className="text-[8.4vw] tracking-tighter border-solid bg-black leading-[15vw] border-b-2 border-t-2 font-[nohemi] border-white"> WORKING ON PROJECTS®</div> 
-        </div> */
-  }
+{/* <div className="  h-[100vh]">
+      <div className="text-[8.4vw] tracking-tighter border-solid bg-black leading-[15vw] border-b-2 border-t-2 font-[nohemi] border-white"> WORKING ON PROJECTS®</div> 
+      </div> */}
   return (
-    <div ref={scrollRef}>
+    <div  ref={scrollRef} >
+
+     
+
       <MainSection></MainSection>
+    
+        <Section></Section>
 
-      <Section></Section>
+        <Works></Works> 
+  
+        <Aboutpage></Aboutpage>
+    
+    
 
-      <Works></Works>
+      <div className="h-[100vh]">
 
-      <Aboutpage></Aboutpage>
 
-      <div className="h-[100vh]"></div>
+
+      </div>
+      
+
+    
     </div>
   );
 }

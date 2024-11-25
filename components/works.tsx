@@ -4,8 +4,8 @@ import gsap from "gsap";
 import { useEffect } from "react";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 import WorksTitleRight from "./works-title-right";
-gsap.registerPlugin(ScrollTrigger);
-const Works = () => {
+
+const Works=()=> {
   useEffect(() => {
     // Array to loop through sections and set x-translate values
     const sections = [
@@ -31,6 +31,7 @@ const Works = () => {
 
       // Animate section movement
       tl.to(section.className, { ease: "none", x: section.x });
+    
     });
 
     const linehi = [
@@ -85,7 +86,7 @@ const Works = () => {
             <WorksTitleRight
               text1="3D PROJECT"
               text2="Antiques"
-              photo="/images/image 231.png"
+              photo="/images/wokey-factory-6Gg5WxPhpVY-unsplash.jpg"
             ></WorksTitleRight>
           </div>
         </div>
@@ -94,7 +95,7 @@ const Works = () => {
             <WorksTitle
               text1="Movie"
               text2="Outdoor"
-              photo="/images/Wall-Poster-Mockup.jpg"
+              photo="/images/philip-ho-vM2lRi7VMRk-unsplash.jpg"
             ></WorksTitle>
           </div>
         </div>
@@ -104,7 +105,7 @@ const Works = () => {
             <WorksTitleRight
               text1="Website"
               text2="Designer"
-              photo="/images/image 231.png"
+              photo="/images/demi-deherrera-L-sm1B4L1Ns-unsplash.jpg"
             ></WorksTitleRight>
           </div>
         </div>

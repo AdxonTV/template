@@ -26,7 +26,7 @@ const WorksTitle: React.FC<works> = ({ text1, text2, photo }) => {
 
     <div className="w-[40vw]  h-fit overflow-hidden  ">
         <Image
-        className="w-full"
+        className="w-full dasphoto"
           src={photo}
           width={4000}
           alt="  "
