@@ -1,6 +1,8 @@
 import React, { useState, useEffect,} from 'react';
 import Image from 'next/image';
-
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/src/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger)
 const Thefooter = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);  // Stan do śledzenia aktualnego obrazu
   const imageSources = [
@@ -23,10 +25,6 @@ const Thefooter = () => {
 
   useEffect(() => {
 
-
-
-
-
     
     // Dodanie event listenera dla scrolla
     window.addEventListener('wheel', handleWheel);
@@ -37,8 +35,22 @@ const Thefooter = () => {
     };
   }, []);
 
+  useEffect(()=>{
+    gsap.to(".thephotos",{
+        scrollTrigger:{
+            trigger:".thephotos",
+            scrub:true,
+            start:"center center",
+            end:"center center"
+            
+        },
+        opacity:100
+    })
+  },[])
+  
+
   return (
-    <div className="scroll-container w-[100vw] flex justify-center h-[105vh]">
+    <div className="scroll-container2 w-[100vw] flex justify-center h-[105vh]">
         <div className=' w-[50vw] mt-[-10vh] flex justify-center items-center'>
       <div className=" ">
         <Image
@@ -46,7 +58,8 @@ const Thefooter = () => {
           alt={`Image ${currentImageIndex + 1}`}
           width={1000}
           height={1000}
-          className=" "
+          className='thephotos opacity-0'
+          style={{ filter: "grayscale(100%)"}}
         />
       </div></div>
     </div>
