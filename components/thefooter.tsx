@@ -22,6 +22,12 @@ const Thefooter = () => {
   };
 
   useEffect(() => {
+
+
+
+
+
+    
     // Dodanie event listenera dla scrolla
     window.addEventListener('wheel', handleWheel);
 
@@ -32,16 +38,17 @@ const Thefooter = () => {
   }, []);
 
   return (
-    <div className="scroll-container h-[105vh]">
-      <div className="image-item">
+    <div className="scroll-container w-[100vw] flex justify-center h-[105vh]">
+        <div className=' w-[50vw] mt-[-10vh] flex justify-center items-center'>
+      <div className=" ">
         <Image
           src={imageSources[currentImageIndex]}
           alt={`Image ${currentImageIndex + 1}`}
-          width={300}
-          height={200}
-          className="absolute"
+          width={1000}
+          height={1000}
+          className=" "
         />
-      </div>
+      </div></div>
     </div>
   );
 };
