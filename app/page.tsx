@@ -15,17 +15,16 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    const cursorDot = document.querySelector(".cursor-dot");
-    const cursorOutline = document.querySelector(".cursor-outline");
-  
-    const handleMouseMove = (e) => {
+    const cursorDot = document.querySelector('.cursor-dot') as HTMLElement;
+    const cursorOutline = document.querySelector('.cursor-outline') as HTMLElement;
+    const handleMouseMove = (e: MouseEvent) => {
       const posX = e.clientX;
       const posY = e.clientY;
-  
+    
       // Aktualizacja pozycji kropki
       cursorDot.style.left = `${posX}px`;
       cursorDot.style.top = `${posY}px`;
-  
+    
       // Animacja obrysu kursora
       cursorOutline.animate(
         [
