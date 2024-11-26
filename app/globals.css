@@ -65,6 +65,8 @@ body {
   position: fixed;
   width: 8px;
   height: 8px;
+  margin-left: 0.5vw;
+  margin-top: 0.5vw;
   background-color: #ffffff;
   border-radius: 50%;
   pointer-events: none; /* Zapobiega kolizji z elementami */
