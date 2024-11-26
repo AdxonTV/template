@@ -93,7 +93,7 @@ export default function Home() {
       <div className="text-[8.4vw] tracking-tighter border-solid bg-black leading-[15vw] border-b-2 border-t-2 font-[nohemi] border-white"> WORKING ON PROJECTS®</div> 
       </div> */}
   return (
-    <div  ref={scrollRef} >
+    <div  ref={scrollRef} className="no-cursor cursor-none" >
 
      <div className="cursor-dot"></div>
      <div className="cursor-outline"></div>
