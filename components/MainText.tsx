@@ -16,18 +16,19 @@ useEffect(()=>{
 gsap.to((".endline"),{
   scrollTrigger:{
     trigger:".dekonteiner",
-    start:"top top",
-    end:"bottom center",
+    start:"center top",
+    end:"bottom top",
     scrub:true
   },
-  width:"100vw"
+  x:"-100vw"
 })
 
 },[])
   return (
     <div className=''>
-      <div  className='endline w-0 h-[0.4vh] bg-slate-50 absolute bottom-[12.5vh]'></div>
-    <h1  className='  text-[10.8vw] leading-[15vh] text-center w-full z-50 font-[nohemi] '>{text}<span className='font-[ade]'>{text2}</span></h1>
+      
+      <div  className='endline w-[100vw] right-[-100vw] h-[0.4vh] bg-white absolute bottom-[12.5vh]'></div>
+    <h1  className='  text-[10.8vw] leading-[15vh] text-center text-white w-full z-50 font-[nohemi] '>{text}<span className='font-[ade]'>{text2}</span></h1>
     </div>
   )
 }

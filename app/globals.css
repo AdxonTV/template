@@ -84,4 +84,19 @@ body {
   transition: transform 0.01s ease; /* Płynne przesunięcie */
 }
 
+.photo-container {
+  position: relative;
+}
 
+.image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 50vh; /* Ensure each image spans the viewport height */
+  opacity: 0; /* Hidden by default */
+}
+
+.animation-start {
+  height: 50px; /* Adjust as needed */
+}

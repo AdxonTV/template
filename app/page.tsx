@@ -1,12 +1,14 @@
-"use client"; // Ensure that this code runs only on the client side.
+"use client"; // Ensure this is at the top
+
 import Section from "@/components/section";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import ScrollTrigger from "gsap/src/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 import Aboutpage from "@/components/aboutpage";
 import Works from "@/components/works";
 import MainSection from "@/components/main-section";
+import Thefooter from "@/components/thefooter";
 
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -14,38 +16,38 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Custom Cursor Effect
   useEffect(() => {
     const cursorDot = document.querySelector('.cursor-dot') as HTMLElement;
     const cursorOutline = document.querySelector('.cursor-outline') as HTMLElement;
+
     const handleMouseMove = (e: MouseEvent) => {
       const posX = e.clientX;
       const posY = e.clientY;
-    
-      // Aktualizacja pozycji kropki
+
+      // Update dot position
       cursorDot.style.left = `${posX}px`;
       cursorDot.style.top = `${posY}px`;
-    
-      // Animacja obrysu kursora
-      cursorOutline.animate(
-        [
-          { left: `${posX}px`, top: `${posY}px` }
-        ],
-        { duration: 500, fill: "forwards" }
-      );
+
+      // Animate outline position
+      gsap.to(cursorOutline, {
+        left: `${posX}px`,
+        top: `${posY}px`,
+        duration: 0.5,
+        ease: "power2.out"
+      });
     };
-  
-    // Dodanie nasłuchiwacza zdarzeń
+
     window.addEventListener("mousemove", handleMouseMove);
-  
-    // Czyszczenie nasłuchiwacza przy odmontowaniu komponentu
+
+    // Cleanup
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-  
-  // Handle loading state
 
-
+  // Handle Loading State
   useEffect(() => {
     if (isLoading) {
       document.body.style.overflow = "hidden"; // Disable scrolling during loading
@@ -53,67 +55,60 @@ export default function Home() {
       document.body.style.overflow = ""; // Re-enable scrolling after loading
     }
 
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setIsLoading(false); // Set loading to false once the page is ready
       document.body.style.cursor = "default"; // Reset cursor
-    }, 1000); // Adjust the timeout for your needs
+    }, 1000); // Adjust the timeout as needed
+
+    // Cleanup
+    return () => clearTimeout(timer);
   }, [isLoading]);
 
   // Initialize Lenis and ScrollTrigger after the page is loaded
   useEffect(() => {
     if (!isLoading && scrollRef.current) {
       const lenis = new Lenis({
-        // Optional Lenis options
-        lerp: 0.05,         // Controls the smoothness of scrolling
-  touchMultiplier: 1, // Sensitivity of touch scrolling (used for touch events)
-
+        lerp: 0.05,          // Smoothness of scrolling
+        touchMultiplier: 1,  // Sensitivity for touch scrolling
       });
 
-      
-
-      // Ensure ScrollTrigger works with Lenis scroll
-      lenis.on("scroll", ScrollTrigger.update); // Make ScrollTrigger update on Lenis scroll
+      // Update ScrollTrigger on Lenis scroll
+      lenis.on("scroll", ScrollTrigger.update);
 
       // Sync GSAP ticker with Lenis
       gsap.ticker.add((time) => {
         lenis.raf(time * 1000);
       });
 
-      // Disable smoothing in GSAP for smoother interaction with Lenis
+      // Disable GSAP's lag smoothing
       gsap.ticker.lagSmoothing(0);
 
-      // Optional: Setup ScrollTrigger defaults for Lenis
+      // Set ScrollTrigger to use Lenis' scroll container
       ScrollTrigger.defaults({
-        scroller: scrollRef.current, // Tell ScrollTrigger to use Lenis scroll container
+        scroller: scrollRef.current,
       });
+
+      // Refresh ScrollTrigger when all resources are loaded
+      ScrollTrigger.refresh();
     }
   }, [isLoading]);
 
-{/* <div className="  h-[100vh]">
-      <div className="text-[8.4vw] tracking-tighter border-solid bg-black leading-[15vw] border-b-2 border-t-2 font-[nohemi] border-white"> WORKING ON PROJECTS®</div> 
-      </div> */}
-  return (
-    <div  ref={scrollRef} className="no-cursor cursor-none" >
-
-     <div className="cursor-dot"></div>
-     <div className="cursor-outline"></div>
-      <MainSection></MainSection>
-    
-        <Section></Section>
-
-        <Works></Works> 
+  // Animate .thanks Element
   
-        <Aboutpage></Aboutpage>
-    
-    
 
-      <div className="h-[100vh]">
+  return (
+    <div ref={scrollRef} className="no-cursor cursor-none">
+      {/* Custom Cursor Elements */}
+      <div className="cursor-dot"></div>
+      <div className="cursor-outline"></div>
 
-
-
-      </div>
-      
-
+      {/* Main Content Sections */}
+      <MainSection />
+      <Section />
+      <Works />
+      <Aboutpage />
+<Thefooter></Thefooter>
+      {/* Photo Scroll Animation Section */}
     
     </div>
   );
