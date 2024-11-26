@@ -76,8 +76,8 @@ useEffect(()=>{
       <div className="flex items-center h-full    px-[1vw]">
         <div>
           <div className="flex w-full ">
-          <div className="bg-gray-700 relative overflow-hidden w-[28vw] h-[60vh]">
-            <div className="bg-gray-700 relative overflow-hidden top-[-20%] w-[28vw] h-[80vh]">
+          <div className="bg-gray-700 relative overflow-hidden w-[28vw] h-[55vh]">
+            <div className="bg-gray-700 relative overflow-hidden top-[-20%] w-[25vw] h-[80vh]">
   {" "}
   <Image
     className="imagemove  w-[150vw] translate-y-[-7vh] absolute"

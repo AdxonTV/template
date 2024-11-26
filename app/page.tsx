@@ -14,7 +14,36 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
-
+  useEffect(() => {
+    const cursorDot = document.querySelector(".cursor-dot");
+    const cursorOutline = document.querySelector(".cursor-outline");
+  
+    const handleMouseMove = (e) => {
+      const posX = e.clientX;
+      const posY = e.clientY;
+  
+      // Aktualizacja pozycji kropki
+      cursorDot.style.left = `${posX}px`;
+      cursorDot.style.top = `${posY}px`;
+  
+      // Animacja obrysu kursora
+      cursorOutline.animate(
+        [
+          { left: `${posX}px`, top: `${posY}px` }
+        ],
+        { duration: 500, fill: "forwards" }
+      );
+    };
+  
+    // Dodanie nasłuchiwacza zdarzeń
+    window.addEventListener("mousemove", handleMouseMove);
+  
+    // Czyszczenie nasłuchiwacza przy odmontowaniu komponentu
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+  
   // Handle loading state
 
 
@@ -67,8 +96,8 @@ export default function Home() {
   return (
     <div  ref={scrollRef} >
 
-     
-
+     <div className="cursor-dot"></div>
+     <div className="cursor-outline"></div>
       <MainSection></MainSection>
     
         <Section></Section>
