@@ -93,8 +93,12 @@ export default function Home() {
     }
   }, [isLoading]);
 
+
+
   // Animate .thanks Element
+
   
+    // Upewniamy się, że element istnieje przed dodaniem event listenera
 
   return (
     <div ref={scrollRef} className="no-cursor cursor-none">
@@ -103,6 +107,9 @@ export default function Home() {
       <div className="cursor-outline"></div>
 
       {/* Main Content Sections */}
+      {/* <div className="menu z-[1000] fixed w-[40vw] right-[-20vw] h-[100vh] bg-slate-600"> */}
+{/* CREATE A SHOUP MENU FOR EACH SHIT */}
+      </div>
       <MainSection />
       <Section />
       <Works />

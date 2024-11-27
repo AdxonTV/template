@@ -3,17 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #151515;
+  --foreground: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #151515;
-    --foreground: #f4f4f4;
-  }
-
-}
 @font-face {
   font-family: nohemi;
   src: url("/fonts/Nohemi-Regular.ttf");
