@@ -58,7 +58,7 @@ const Thefooter = () => {
           alt={`Image ${currentImageIndex + 1}`}
           width={1000}
           height={1000}
-          className='thephotos opacity-0'
+          className='thephotos opacity-0 w-[35vw]'
           style={{ filter: "grayscale(100%)"}}
         />
       </div></div>
