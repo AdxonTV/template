@@ -2,6 +2,7 @@ import React, { useState, useEffect,} from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
+import Magnetic from './magnetic';
 gsap.registerPlugin(ScrollTrigger)
 const Thefooter = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);  // Stan do śledzenia aktualnego obrazu
@@ -52,7 +53,8 @@ const Thefooter = () => {
   return (
     <div className="scroll-container2 w-[100vw] flex justify-center h-[105vh]">
         <div className=' w-[50vw] mt-[-10vh] flex justify-center items-center'>
-      <div className=" ">
+      <div className="h-[100vh] flex items-center ">
+      <Magnetic>
         <Image
           src={imageSources[currentImageIndex]}
           alt={`Image ${currentImageIndex + 1}`}
@@ -60,7 +62,7 @@ const Thefooter = () => {
           height={1000}
           className='thephotos opacity-0 w-[35vw]'
           style={{ filter: "grayscale(100%)"}}
-        />
+        /></Magnetic>
       </div></div>
     </div>
   );

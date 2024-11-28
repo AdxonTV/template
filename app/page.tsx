@@ -1,5 +1,6 @@
 "use client"; // Ensure this is at the top
 
+
 import Section from "@/components/section";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
@@ -102,18 +103,13 @@ export default function Home() {
 
   return (
     <div ref={scrollRef} className="no-cursor cursor-none">
-      {/* Custom Cursor Elements */}
       <div className="cursor-dot"></div>
       <div className="cursor-outline"></div>
-
-      {/* Main Content Sections */}
-
       <MainSection />
       <Section />
       <Works />
       <Aboutpage />
-<Thefooter></Thefooter>
-      {/* Photo Scroll Animation Section */}
+      <Thefooter></Thefooter>
     
     </div>
   );
