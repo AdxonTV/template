@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Text from "./text";
 interface text {
   text: string;
   image?: string;
@@ -20,9 +21,9 @@ const Button: React.FC<text> = ({ text, image }) => {
      alt=""
      ></Image>
       </div>
-
-      
-      {text}</div>
+<div className="w-[7.8vw]">
+      <Text texy={text} ></Text></div>
+     </div>
     </div>
   );
 };
