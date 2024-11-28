@@ -11,6 +11,10 @@ const Thefooter = () => {
     '/images/nigel-hoare-r5c_l6SCRdg-unsplash.jpg',
     '/images/susan-wilkinson-IIc73xHTRTg-unsplash.jpg',
     '/images/demi-deherrera-L-sm1B4L1Ns-unsplash.jpg',
+    '/images/philip-ho-vM2lRi7VMRk-unsplash.jpg',
+    '/images/bruno-cervera-YpOZ8XepzYU-unsplash.jpg'
+
+  
   ];
 
   // Funkcja do obsługi zdarzenia scroll
@@ -53,8 +57,9 @@ const Thefooter = () => {
   return (
     <div className="scroll-container2 w-[100vw] flex justify-center h-[105vh]">
         <div className=' w-[50vw] mt-[-10vh] flex justify-center items-center'>
-      <div className="h-[100vh] flex items-center ">
-      <Magnetic>
+      <div className="h-[100vh] flex items-center "> <Magnetic>
+        <div className='h-[50vh] overflow-hidden  flex items-center'>
+     
         <Image
           src={imageSources[currentImageIndex]}
           alt={`Image ${currentImageIndex + 1}`}
@@ -62,7 +67,7 @@ const Thefooter = () => {
           height={1000}
           className='thephotos opacity-0 w-[35vw]'
           style={{ filter: "grayscale(100%)"}}
-        /></Magnetic>
+        /></div></Magnetic>
       </div></div>
     </div>
   );
