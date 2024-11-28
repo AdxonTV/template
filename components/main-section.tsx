@@ -35,7 +35,9 @@ const MainSection = () => {
         },
   
         // x: vw(37),
-        y: 1050, // moves the box horizontally
+        y: "140vh", // moves the box horizontally
+        filter:"blur(500px)"
+        
       });
   
   

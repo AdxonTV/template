@@ -14,7 +14,7 @@ const WorksTitleRight :React.FC<works> = ({text1, text2, photo}) => {
 
         
 
-<div className="w-full h-[50vh] overflow-  flex">
+<div className="w-full h-[60vh] overflow-  flex">
 {/* <div className="w-[49vw] "></div> */}
 <div className="w-[51vw]   flex items-center   relative">
 

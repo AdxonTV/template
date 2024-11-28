@@ -146,9 +146,9 @@ const Section=() => {
       </div>
 
       <div className="text-container absolute z-50 h-[100vh] flex items-center justify-center overflow-hidden w-[200vw] ml-[-50%]">
-        <span className="text1 font-[ade] text-[10vw]  pl-[1.9vw]">SHOW</span>
+        <span className="text1 font-[ade] text-[10vw]  pl-[1.9vw] blur-[0px] hover:blur-[10px] transition">SHOW</span>
         <div className="space-between-words w-[250vw] bg-slate-50 z-50 h-[0px] opacity-50"></div>
-        <span className="text2 font-[nohemi]   text-[11vw]">WORK</span>
+        <span className="text2 font-[nohemi]   text-[11vw]  blur-[0px] hover:blur-[10px] transition">WORK</span>
       </div>
 
       <div className="object-container w-full h-[100vh] flex items-center justify-center absolute overflow-hidden">

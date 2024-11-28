@@ -7,7 +7,7 @@ interface works {
 }
 const WorksTitle: React.FC<works> = ({ text1, text2, photo }) => {
   return (
-<div className="">
+<div className=" h-[60vh]">
 
 
 
@@ -18,7 +18,7 @@ const WorksTitle: React.FC<works> = ({ text1, text2, photo }) => {
 
 
 
-<div className="w-full h-[60vh]   flex ">
+<div className="w-full min-h-[70vh] max-h-[80vh] overflow-hidden   flex ">
 
 
 

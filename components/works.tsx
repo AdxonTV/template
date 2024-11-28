@@ -72,20 +72,20 @@ const Works=()=> {
         <div>
           <div className="work-1">
             <div className="section1  w-[49vw] h-[45vh] mt-[20vh] flex translate-x-[-100%]">
-              <div className="items-center leading-none  text-[10vw] ">
+              <div className="items-center  leading-none  text-[10vw] ">
                 ALL WORKS
               </div>
             </div>
           </div>
           <div className="ml-[1vw] text-[0.7vw]">TEXT PROVING ITS CLEAN</div>
-          <div className="flex items-center"></div>
+          <div className="flex items-center  mb-[-70px]"></div>
         </div>
 
         <div className="work-2 h-[45vh] w-fit">
           <div className="section2 mb-[-70px] translate-x-[200%]">
             <WorksTitleRight
-              text1="3D PROJECT"
-              text2="Antiques"
+              text1="PRODUCT"
+              text2="KEYBOARD NO/KEY"
               photo="/images/wokey-factory-6Gg5WxPhpVY-unsplash.jpg"
             ></WorksTitleRight>
           </div>
@@ -94,7 +94,7 @@ const Works=()=> {
           <div className="section3 mb-[-70px] translate-x-[-100%]">
             <WorksTitle
               text1="Movie"
-              text2="Outdoor"
+              text2="CHINIESE"
               photo="/images/philip-ho-vM2lRi7VMRk-unsplash.jpg"
             ></WorksTitle>
           </div>
@@ -104,7 +104,7 @@ const Works=()=> {
           <div className="section4 mb-[-70px] translate-x-[200%]">
             <WorksTitleRight
               text1="Website"
-              text2="Designer"
+              text2="COFFEE BRANGING"
               photo="/images/demi-deherrera-L-sm1B4L1Ns-unsplash.jpg"
             ></WorksTitleRight>
           </div>
@@ -113,8 +113,8 @@ const Works=()=> {
           <div className="section5 mb-[-70px] translate-x-[-200%]">
             <WorksTitle
               text1="Graphic"
-              text2="Project"
-              photo="/images/Wall-Poster-Mockup.jpg"
+              text2="YEEZY"
+              photo="/images/bruno-cervera-YpOZ8XepzYU-unsplash.jpg"
             ></WorksTitle>
           </div>
         </div>
@@ -122,8 +122,8 @@ const Works=()=> {
           <div className="section6 mb-[-70px] translate-x-[200%]">
             <WorksTitleRight
               text1="Website"
-              text2="Designer"
-              photo="/images/image 231.png"
+              text2="Designer Clothes"
+              photo="/images/venti-views-n7AG4GtbhiM-unsplash.jpg"
             ></WorksTitleRight>
           </div>
         </div>
