@@ -39,12 +39,35 @@ export default function Home() {
         ease: "power2.out"
       });
     };
-
     window.addEventListener("mousemove", handleMouseMove);
-
+    
     // Cleanup
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+
+
+  useEffect(() => {
+    const elements = document.querySelectorAll('.dasphoto');
+    const cursorDot = document.querySelector('.cursor-dot') as HTMLElement;
+  
+    elements.forEach((element) => {
+      element.addEventListener('mouseenter', () => {
+        gsap.to(cursorDot, { scale: 20, transition:0.0001, ease:"power4.out"});
+      });
+  
+      element.addEventListener('mouseleave', () => {
+        gsap.to(cursorDot, { scale: 1, transition:0.01 });
+      });
+    });
+  
+    return () => {
+      elements.forEach((element) => {
+        element.removeEventListener('mouseenter', () => {});
+        element.removeEventListener('mouseleave', () => {});
+      });
     };
   }, []);
 

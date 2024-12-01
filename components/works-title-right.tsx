@@ -28,7 +28,7 @@ const WorksTitleRight :React.FC<works> = ({text1, text2, photo}) => {
   <div className="w-[12vw]"></div>
 
 
-  <div className="w-[40vw]    overflow-hidden">
+  <div className="w-[40vw]  dasphoto  overflow-hidden">
         <Image
         className="w-full  "
           src={photo}

@@ -54,28 +54,38 @@ body {
   color: rgb(0, 0, 0);
   background: rgb(222, 222, 222);
 }
-.cursor-dot {
-  position: fixed;
-  width: 8px;
-  height: 8px;
-  margin-left: 0.6vw;
-  margin-top: 0.6vw;
-  background-color: #ffffff;
-  border-radius: 50%;
-  pointer-events: none; /* Zapobiega kolizji z elementami */
-  z-index: 1000;
-}
+
 
 .cursor-outline {
   position: fixed;
-  width: 40px;
-  height: 40px;
-  border: 2px solid #a9a9a9;
+  display: flex;
+  align-items: center; /* Wyśrodkowanie w osi pionowej */
+  justify-content: center; /* Wyśrodkowanie w osi poziomej */
+  width: 2vw;
+  height: 2vw;
+
+  border: 0.05vw solid #a9a9a9;
   border-radius: 50%;
   pointer-events: none;
   z-index: 999;
   transition: transform 0.1s ease; /* Płynne przesunięcie */
 }
+.cursor-dot {
+  position: fixed;
+  width: 0.3vw;
+  margin-top: 0.8vw;
+  margin-left: 0.82vw;
+  height: 0.3vw;
+  background-color: #ffffff;
+  border-radius: 90%;
+
+  pointer-events: none;
+  z-index: 1000;
+  backdrop-filter: invert(80%);
+  transition: transform 0.01s ease;
+}
+
+
 
 .photo-container {
   position: relative;
