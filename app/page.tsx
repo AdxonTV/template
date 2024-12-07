@@ -1,6 +1,5 @@
 "use client"; // Ensure this is at the top
 
-
 import Section from "@/components/section";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
@@ -20,8 +19,10 @@ export default function Home() {
 
   // Custom Cursor Effect
   useEffect(() => {
-    const cursorDot = document.querySelector('.cursor-dot') as HTMLElement;
-    const cursorOutline = document.querySelector('.cursor-outline') as HTMLElement;
+    const cursorDot = document.querySelector(".cursor-dot") as HTMLElement;
+    const cursorOutline = document.querySelector(
+      ".cursor-outline"
+    ) as HTMLElement;
 
     const handleMouseMove = (e: MouseEvent) => {
       const posX = e.clientX;
@@ -36,37 +37,39 @@ export default function Home() {
         left: `${posX}px`,
         top: `${posY}px`,
         duration: 0.3,
-        ease: "power2.out"
+        ease: "power2.out",
       });
     };
     window.addEventListener("mousemove", handleMouseMove);
-    
+
     // Cleanup
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
-
-
   useEffect(() => {
-    const elements = document.querySelectorAll('.dasphoto');
-    const cursorDot = document.querySelector('.cursor-dot') as HTMLElement;
-  
+    const elements = document.querySelectorAll(".dasphoto");
+    const cursorDot = document.querySelector(".cursor-dot") as HTMLElement;
+
     elements.forEach((element) => {
-      element.addEventListener('mouseenter', () => {
-        gsap.to(cursorDot, { scale: 20, transition:0.0001, ease:"power4.out"});
+      element.addEventListener("mouseenter", () => {
+        gsap.to(cursorDot, {
+          scale: 20,
+          transition: 0.0001,
+          ease: "power4.out",
+        });
       });
-  
-      element.addEventListener('mouseleave', () => {
-        gsap.to(cursorDot, { scale: 1, transition:0.01 });
+
+      element.addEventListener("mouseleave", () => {
+        gsap.to(cursorDot, { scale: 1, transition: 0.01 });
       });
     });
-  
+
     return () => {
       elements.forEach((element) => {
-        element.removeEventListener('mouseenter', () => {});
-        element.removeEventListener('mouseleave', () => {});
+        element.removeEventListener("mouseenter", () => {});
+        element.removeEventListener("mouseleave", () => {});
       });
     };
   }, []);
@@ -92,8 +95,8 @@ export default function Home() {
   useEffect(() => {
     if (!isLoading && scrollRef.current) {
       const lenis = new Lenis({
-        lerp: 0.05,          // Smoothness of scrolling
-        touchMultiplier: 1,  // Sensitivity for touch scrolling
+        lerp: 0.05, // Smoothness of scrolling
+        touchMultiplier: 1, // Sensitivity for touch scrolling
       });
 
       // Update ScrollTrigger on Lenis scroll
@@ -117,15 +120,18 @@ export default function Home() {
     }
   }, [isLoading]);
 
-
-
   // Animate .thanks Element
 
-  
-    // Upewniamy się, że element istnieje przed dodaniem event listenera
+  // Upewniamy się, że element istnieje przed dodaniem event listenera
 
   return (
     <div ref={scrollRef} className="no-cursor cursor-none">
+      <div className="w-[100vw] top-0 z-[1000000] items-center justify-center h-[100vh] fixed pointer-events-none bg-black flex md:hidden">
+        <div className="text-center">
+          <div>THE WEBSITE®</div>
+          <div className="opacity-40">Made for PC</div>
+        </div>
+      </div>
       <div className="cursor-dot"></div>
       <div className="cursor-outline"></div>
       <MainSection />
@@ -133,7 +139,6 @@ export default function Home() {
       <Works />
       <Aboutpage />
       <Thefooter></Thefooter>
-    
     </div>
   );
 }
