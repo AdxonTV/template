@@ -126,7 +126,7 @@ export default function Home() {
 
   return (
     <div ref={scrollRef} className="no-cursor cursor-none">
-      <div className="w-[100vw] top-0 z-[1000000] items-center justify-center h-[200vh] fixed pointer-events-none bg-black flex md:hidden">
+      <div className="w-[100vw] top-0 z-[1000000] items-center overflow-hidden justify-center h-[200vh] fixed pointer-events-none bg-black flex md:hidden">
         <div className="text-center">
           <div>THE WEBSITE®</div>
           <div className="opacity-40">Made for PC</div>
