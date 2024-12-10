@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-
+import Loading from "@/components/loading";
 import "./globals.css";
-
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Template-Zast",
@@ -18,7 +18,8 @@ export default function RootLayout({
       <body
        
       >
-        {children}
+        <Suspense fallback={<Loading/>}> {children}</Suspense>
+  
       </body>
     </html>
   );

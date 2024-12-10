@@ -14,6 +14,7 @@ import Thefooter from "@/components/thefooter";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+
   const [isLoading, setIsLoading] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -120,11 +121,14 @@ export default function Home() {
     }
   }, [isLoading]);
 
+  
+
   // Animate .thanks Element
 
   // Upewniamy się, że element istnieje przed dodaniem event listenera
 
   return (
+
     <div ref={scrollRef} className="no-cursor cursor-none">
       <div className="w-[100vw] top-0 z-[1000000] items-center justify-center h-[100vh] fixed pointer-events-none bg-black flex md:hidden">
         <div className="text-center">
@@ -139,6 +143,6 @@ export default function Home() {
       <Works />
       <Aboutpage />
       <Thefooter></Thefooter>
-    </div>
+    </div> 
   );
 }
