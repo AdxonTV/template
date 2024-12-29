@@ -92,8 +92,8 @@ function About() {
     }
   };
 
-  const handleType = (e: any) => {
-    setInputText(e.target.value);
+  const handleType = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    setInputText(e.currentTarget.value);
     if (e.key === "Enter") {
       checkWord();
     }
@@ -103,7 +103,13 @@ function About() {
     <div className="text-white w-full justify-center  flex just flex-col  h-[100vh] items-center ">
       <div className="">
         <h1 className="text-[15vw]   tracking-tighter font-black">฿elmondœ</h1>
-        <Image width={200} height={200} alt="belmobóg" className="opacity-0 hover:opacity-70 absolute top-[20vh]" src="/images/Belmondo_2019.png"></Image>
+        <Image
+          width={200}
+          height={200}
+          alt="belmobóg"
+          className="opacity-0 hover:opacity-70 absolute top-[20vh]"
+          src="/images/Belmondo_2019.png"
+        ></Image>
         <input
           ref={inputRef}
           className="text-black w-full"
