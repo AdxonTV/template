@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function App() {
+function About() {
   const words = ["taper", "fade", "low"];
   const [inputText, setInputText] = useState("");
   const [result, setResult] = useState("");
@@ -31,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default About;
