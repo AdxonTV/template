@@ -9,7 +9,7 @@ import Aboutpage from "@/components/aboutpage";
 import Works from "@/components/works";
 import MainSection from "@/components/main-section";
 import Thefooter from "@/components/thefooter";
-
+import Loading from "@/components/loading";
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -83,6 +83,8 @@ export default function Home() {
       document.body.style.overflow = ""; // Re-enable scrolling after loading
     }
 
+    
+
     const timer = setTimeout(() => {
       setIsLoading(false); // Set loading to false once the page is ready
       document.body.style.cursor = "default"; // Reset cursor
@@ -130,6 +132,7 @@ export default function Home() {
   return (
 
     <div ref={scrollRef} className="no-cursor cursor-none">
+     
       <div className="w-[100vw] top-0 z-[1000000] items-center justify-center h-[100vh] fixed pointer-events-none bg-black flex md:hidden">
         <div className="text-center">
           <div>THE WEBSITE®</div>

@@ -1,9 +1,10 @@
-import React from 'react'
 
-const Loading = () => {
+export default function Loading() {
+
+
   return (
-    <div className='w-[100vw] z-[1000000] h-[100vh] bg-white absolute'>Loading</div>
-  )
+    <div className="absolute w-full h-full bg-white text-black text-[35vw]">
+     0
+    </div>
+  );
 }
-
-export default Loading
