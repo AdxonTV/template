@@ -1,33 +1,125 @@
-"use client"
-import React, { useState } from "react";
-
+"use client";
+import React, { useState, useRef } from "react";
+import Image from "next/image";
 function About() {
-  const words = ["taper", "fade", "low"];
+  const initialWords = [
+    "Belmondo",
+    "Młody G",
+    "Młody Sarmata",
+    "Obywatel bez NIPu",
+    "Obywatel Meksyku",
+    "Młody Bonaparte tylko że naprawdę",
+    "Nowy Napoleon tylko większe berło",
+    "Psychodeliczny wiking",
+    "Młody Kmicic",
+    "George Orwell z bongiem",
+    "Sportowiec",
+    "Kolega od jebanka",
+    "Scrooge Ebenezer",
+    "Sztosinger",
+    "Dr Traphałs",
+    "Belmondawg",
+    "Czarodziej z Oz",
+    "Urwipołeć śmierdzący groszem",
+    "Muszkieter",
+    "Ostateczny nurt",
+    "Tytus",
+    "Inspektor Gadżet",
+    "Bojkot",
+    "Nowy Tony Hawk tylko że rapowy",
+    "Młody Gypsy",
+    "Atlas",
+    "Młody Mastermind",
+    "Młody Glitch",
+    "Młody Snake Plissken",
+    "Młody Rastafari",
+    "Tyti",
+    "Młody Gdynianin",
+    "Młody Mowgli",
+    "Belmondziarz",
+    "Belmondziak Sztosinger",
+    "G",
+    "Daquan",
+    "Młody Muchadore",
+    "Młody G z Gdyni",
+    "Hajle Syllasje",
+    "Mowgli Wychowanek Dżungli",
+    "Młody figlarz",
+    "Keepercipek",
+    "Husky",
+    "Młody Scrooge McDuck",
+    "Młody Libertarianin",
+    "Syn Ayn",
+    "Algidziak",
+    "Młody Algida",
+    "Proteziak",
+    "Nowy Larry Flynt",
+    "฿elmondœ",
+    "Młody Stavro Blofeld",
+    "Liroy Merlin",
+    "Mobbyn Ranger",
+    "Nowy Orson Welles",
+    "Młody Bi",
+    "Młody G Sportowiec",
+    "Pogromca kurewek",
+    "Młody powrotowy",
+    "Mesjasz Polskiego Rapu",
+  ];
+
+  const [words, setWords] = useState(initialWords);
+  const [usedWords, setUsedWords] = useState([""]);
+  const inputRef = useRef(null);
+
   const [inputText, setInputText] = useState("");
-  const [result, setResult] = useState("");
+  const [count, setCount] = useState(0);
+  const [result, setResult] = useState("hehehe");
 
   const checkWord = () => {
-    if (words.includes(inputText.toLowerCase())) {
-      setResult("Match found!");
+    const lowWords = {
+      words: words.map((word) => word.toLowerCase()),
+    };
+
+    if (lowWords.words.includes(inputText.toLowerCase())) {
+      setResult("ok");
+      setCount((prev) => prev + 1);
+      setWords(
+        words.filter((word) => word.toLowerCase() !== inputText.toLowerCase())
+      );
+      setUsedWords([...usedWords, inputText, " /"]);
+      setInputText("");
     } else {
-      setResult("No match found.");
+      setResult("hehehe");
+    }
+  };
+
+  const handleType = (e: any) => {
+    setInputText(e.target.value);
+    if (e.key === "Enter") {
+      checkWord();
     }
   };
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h1>Word Match Checker</h1>
-      <input
-        type="text"
-        value={inputText}
-        onChange={(e) => setInputText(e.target.value)}
-        placeholder="Enter a word"
-        style={{ padding: "5px", fontSize: "16px" }}
-      />
-      <button onClick={checkWord} style={{ marginLeft: "10px", padding: "5px 10px" }}>
-        Check
-      </button>
-      <p>{result}</p>
+    <div className="text-white w-full justify-center  flex just flex-col  h-[100vh] items-center ">
+      <div className="">
+        <h1 className="text-[15vw]   tracking-tighter font-black">฿elmondœ</h1>
+        <Image width={200} height={200} alt="belmobóg" className="opacity-0 hover:opacity-70 absolute top-[20vh]" src="/images/Belmondo_2019.png"></Image>
+        <input
+          ref={inputRef}
+          className="text-black w-full"
+          type="text"
+          value={inputText}
+          onChange={(e) => setInputText(e.target.value)}
+          onKeyDown={handleType}
+          placeholder="w kurwe dobrze jest być młodym ..."
+          style={{ padding: "5px", fontSize: "16px" }}
+        />
+        <p>{result}</p>
+        <p>
+          {count}/{initialWords.length}
+        </p>
+        <p>{usedWords}</p>
+      </div>
     </div>
   );
 }
