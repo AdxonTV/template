@@ -99,6 +99,13 @@ function About() {
     }
   };
 
+  const handleReset = () => {  
+    setUsedWords(words)
+    setWords(initialWords)
+    setCount(0)
+
+   };
+
   return (
     <div className="text-white w-full justify-center  flex just flex-col  h-[100vh] items-center ">
       <div className="">
@@ -126,6 +133,10 @@ function About() {
         </p>
         <p>{usedWords}</p>
       </div>
+      <button
+      onClick={()=>(handleReset())}
+      >nieumiem</button>
+      
     </div>
   );
 }
