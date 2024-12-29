@@ -41,20 +41,7 @@ const Aboutpage = () => {
       }
     });
 
-    // gsap.to(".textopacity",{
-
-    //   scrollTrigger:{
-    //     trigger:".mark",
-    //     scrub:true,
-    //     start: "center bottom",
-    //     end: "bottom center", // Converted from 2000px
-    //     pin: false,
-    //     pinSpacing: false,
-
-    //   },
-    //   opacity:"100%"
-
-    // } )
+    
   }, []);
 
   return (

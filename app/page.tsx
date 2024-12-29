@@ -9,7 +9,7 @@ import Aboutpage from "@/components/aboutpage";
 import Works from "@/components/works";
 import MainSection from "@/components/main-section";
 import Thefooter from "@/components/thefooter";
-import Loading from "@/components/loading";
+
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
