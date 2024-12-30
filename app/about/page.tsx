@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useRef } from "react";
-import Image from "next/image";
+
 function About() {
   const initialWords = [
     "Belmondo",
