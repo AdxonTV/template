@@ -108,7 +108,7 @@ function About() {
    };
 
   return (
-    <div className="h-[200vh] overflow-y-scroll">
+    <div className=" ">
     <div className="text-white w-full justify-center  flex just flex-col  items-center ">
       <div className="">
         <h1 className="text-[15vw]   tracking-tighter font-black">฿elmondœ</h1>
@@ -116,7 +116,7 @@ function About() {
           width={200}
           height={200}
           alt="belmobóg"
-          className="opacity-0 hover:opacity-70 absolute top-[20vh]"
+          className="opacity-0 pointer-events-none hover:opacity-70 absolute top-[20vh]"
           src="/images/Belmondo_2019.png"
         ></Image>
         <input
@@ -133,7 +133,7 @@ function About() {
         <p>
           {count}/{initialWords.length}
         </p>
-        <div className="text-red-300 text-[11px]">{usedWords.map((w)=>(<div key={w}>{w}</div>))}</div>
+        <div className="text-red-300 text-[11px]">{usedWords.map((w)=>(<span key={w}>{w} /</span>))}</div>
       </div>
       <button
       onClick={()=>(handleReset())}
