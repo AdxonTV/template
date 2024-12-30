@@ -108,17 +108,21 @@ function About() {
    };
 
   return (
-    <div className=" ">
-    <div className="text-white w-full justify-center  flex just flex-col  items-center ">
+    <div className="w-full relative flex flex-col items-center justify-center">
+    <div 
+      className="h-[100vh] absolute bg-black bg-cover bg-center" 
+      style={{ 
+      backgroundImage: "url('/images/Belmondo_2019.png')", 
+      width: `${(count / initialWords.length) * 100}%` 
+      }}>
+    </div>
+
+    <div className="text-white w-full justify-center z-[1000] relative  flex just flex-col  items-center ">
       <div className="">
         <h1 className="text-[15vw]   tracking-tighter font-black">฿elmondœ</h1>
-        <Image
-          width={200}
-          height={200}
-          alt="belmobóg"
-          className="opacity-0 pointer-events-none hover:opacity-70 absolute top-[20vh]"
-          src="/images/Belmondo_2019.png"
-        ></Image>
+        <div
+          
+        ></div>
         <input
           ref={inputRef}
           className="text-black w-full"
