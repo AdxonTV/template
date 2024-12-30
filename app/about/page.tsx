@@ -85,7 +85,7 @@ function About() {
       setWords(
         words.filter((word) => word.toLowerCase() !== inputText.toLowerCase())
       );
-      setUsedWords([...usedWords, inputText, " /"]);
+      setUsedWords([...usedWords, inputText]);
       setInputText("");
     } else {
       setResult("hehehe");
@@ -100,14 +100,16 @@ function About() {
   };
 
   const handleReset = () => {  
-    setUsedWords(words)
+    setUsedWords(initialWords)
     setWords(initialWords)
     setCount(0)
+    alert("nie zrobiłem jeszcze resetu gry więc wiec refreshuj strone jak chcesz zresetowac fresh er")
 
    };
 
   return (
-    <div className="text-white w-full justify-center  flex just flex-col  h-[100vh] items-center ">
+    <div className="h-[200vh] overflow-y-scroll">
+    <div className="text-white w-full justify-center  flex just flex-col  items-center ">
       <div className="">
         <h1 className="text-[15vw]   tracking-tighter font-black">฿elmondœ</h1>
         <Image
@@ -131,13 +133,13 @@ function About() {
         <p>
           {count}/{initialWords.length}
         </p>
-        <p>{usedWords}</p>
+        <div className="text-red-300 text-[11px]">{usedWords.map((w)=>(<div key={w}>{w}</div>))}</div>
       </div>
       <button
       onClick={()=>(handleReset())}
       >nieumiem</button>
       
-    </div>
+    </div></div>
   );
 }
 
